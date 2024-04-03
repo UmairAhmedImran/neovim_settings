@@ -20,6 +20,9 @@ Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
 Plug 'https://github.com/neoclide/coc.nvim'  " Auto Completion
 set encoding=UTF-8
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' } " Fuzzyfinder
+" or                                , { 'branch': '0.1.x' }
 
 call plug#end()
 
@@ -53,6 +56,11 @@ inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
 source ~/.config/nvim/coc.vim
 
 let g:coc_global_extensions=[ 'coc-omnisharp']
+" shortcuts for telescope 
 
-
-
+:let mapleader = " "
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>gf <cmd>Telescope git_files<cr>
