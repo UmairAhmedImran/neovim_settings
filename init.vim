@@ -64,3 +64,15 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>gf <cmd>Telescope git_files<cr>
+
+" aettings for terminal
+
+:set splitbelow 
+nnoremap <leader>tw :sp<bar>term<cr>:resize10<cr>
+nnoremap <leader>tb :sp term://bash<cr>:resize10<cr>
+nnoremap <leader>ts :sp term://sh<cr>:resize10<cr>
+
+:tnoremap <Esc> <C-\><C-n>
+
+
+
